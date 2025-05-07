@@ -27,7 +27,6 @@ if st.button("Search") and query:
     # Retrieve tickets
     filters = extract_filters(query)
     results = searcher.search(query, filters, top_k=top_k)
-
     # Generate response
     response = generate_response(query, results)
 
@@ -65,5 +64,3 @@ if st.button("Search") and query:
 
 elif not query:
     st.warning("Please enter a query.")
-
-st.write("Feedback is saved to 'feedback.csv' for relevance analysis.")
