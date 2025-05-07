@@ -46,8 +46,9 @@ This project implements a Retrieval-Augmented Generation (RAG) system for suppor
    pip install -r requirements.txt
    ```
 
-3. Set your Hugging Face API token:
+3. Login with & set your Hugging Face API token:
    ```bash
+   huggingface-cli login
    export HF_API_TOKEN="your_huggingface_token"
    ```
 
