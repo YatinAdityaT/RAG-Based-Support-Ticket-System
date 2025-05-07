@@ -30,7 +30,7 @@ def generate_response(query: str, tickets: List[Dict[str, Any]]) -> str:
     try:
         response = client.text_generation(
             prompt=prompt,
-            max_new_tokens=400,
+            max_new_tokens=1400,
             temperature=0.1,
             stop=["</s>"]
         )
