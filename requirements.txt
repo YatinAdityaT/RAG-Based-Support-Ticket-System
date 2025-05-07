@@ -1,0 +1,9 @@
+streamlit
+sentence-transformers
+faiss-cpu
+huggingface_hub
+fuzzywuzzy
+pandas
+numpy
+python-Levenshtein  # Required for fuzzywuzzy
+jupyter
