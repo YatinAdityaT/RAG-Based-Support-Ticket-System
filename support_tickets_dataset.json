@@ -1,0 +1,190 @@
+{
+  "browsers": [
+      "Safari",
+      "Chrome",
+      "Firefox",
+      "Edge",
+      "Brave",
+      "Opera",
+      "Samsung Internet",
+      "In-App Browser",
+      "Internet Explorer 11",
+      "Vivaldi",
+      "DuckDuckGo Browser",
+      "Tor Browser"
+  ],
+  "oses": [
+      "macOS Ventura",
+      "All",
+      "Windows 10",
+      "macOS Sonoma",
+      "Linux Ubuntu",
+      "iOS 16",
+      "Android 13",
+      "Chrome OS",
+      "Windows 11",
+      "macOS Monterey",
+      "Linux Mint",
+      "iOS 15"
+  ],
+  "customer_types": [
+      "Enterprise",
+      "Mixed",
+      "SMB",
+      "Marketing",
+      "Individual",
+      "Education",
+      "Government",
+      "Finance",
+      "Retail",
+      "Healthcare",
+      "Non-profit",
+      "Technology"
+  ],
+  "issue_keywords": [
+      "login failure",
+      "password reset",
+      "login issue",
+      "OAuth consent stuck",
+      "captcha missing",
+      "randomly kicked out",
+      "VPN breaks login",
+      "blank white page",
+      "403 error",
+      "infinite loading",
+      "account locked",
+      "two-factor authentication",
+      "session expired",
+      "profile data lost",
+      "payment failure",
+      "feature not working",
+      "UI broken",
+      "performance slow",
+      "integration error",
+      "data sync issue",
+      "certificate error",
+      "cookie issues",
+      "form submission failure",
+      "email verification failure"
+  ],
+  "resolution_keywords": [
+      "clear cookies",
+      "update settings",
+      "whitelist domain",
+      "check spam",
+      "disable extension",
+      "allow third-party cookies",
+      "use different browser",
+      "refresh page",
+      "restart device",
+      "contact support",
+      "verify account",
+      "enable 2FA",
+      "reset password",
+      "reinstall app",
+      "check internet connection",
+      "update software",
+      "temporary workaround",
+      "investigating issue",
+      "configuration change",
+      "data recovery",
+      "install certificate",
+      "adjust cookie settings",
+      "resubmit form",
+      "resend verification email"
+  ],
+  "tickets": [
+    {"id":"T001","title":"Login failure on Safari for SSO users","browser":"Safari","browser_version":"16.3","os":"macOS Ventura","customer_type":"Enterprise","issue":"login failure during SSO redirect","stage":"SSO-redirect","resolution":"clear cookies; update tracking settings"},
+    {"id":"T002","title":"Login failure on Safari for SSO users","browser":"Safari","browser_version":"16.3","os":"iOS 16","customer_type":"SMB","issue":"login failure during SSO redirect","stage":"SSO-redirect","resolution":"whitelist SSO domain; enable third-party cookies"},
+    {"id":"T003","title":"Login failure on Chrome for SSO users","browser":"Chrome","browser_version":"latest","os":"Windows 10","customer_type":"Enterprise","issue":"login failure during SSO redirect","stage":"SSO-redirect","resolution":"disable VPN; retry SSO flow"},
+    {"id":"T004","title":"Infinite loading at CAPTCHA step","browser":"Firefox","browser_version":"98.0","os":"Linux Ubuntu","customer_type":"Government","issue":"infinite loading at captcha","stage":"captcha","resolution":"disable ad-blocker; update fonts"},
+    {"id":"T005","title":"Infinite loading at CAPTCHA step","browser":"Edge","browser_version":"101.0","os":"Windows 11","customer_type":"Healthcare","issue":"infinite loading at captcha","stage":"captcha","resolution":"clear cookies; refresh page"},
+    {"id":"T006","title":"Conflict with password manager extension","browser":"Chrome","browser_version":"latest","os":"macOS Sonoma","customer_type":"Mixed","issue":"extension blocking login form","stage":"pre-login","resolution":"disable extension; restart browser"},
+    {"id":"T007","title":"Conflict with password manager extension","browser":"Firefox","browser_version":"latest","os":"Windows 11","customer_type":"Retail","issue":"extension blocking login form","stage":"pre-login","resolution":"enable third-party cookies; update extension settings"},
+    {"id":"T008","title":"Account locked after failed login attempts","browser":"All","browser_version":"N/A","os":"All","customer_type":"Individual","issue":"account locked after 5 failed tries","stage":"pre-login","resolution":"contact support to unlock account"},
+    {"id":"T009","title":"Account locked after failed login attempts","browser":"Edge","browser_version":"100.0","os":"Chrome OS","customer_type":"Enterprise","issue":"account locked after 5 failed tries","stage":"pre-login","resolution":"wait 15 minutes; retry"},
+    {"id":"T010","title":"Password reset email not received","browser":"All","browser_version":"N/A","os":"All","customer_type":"Education","issue":"password reset email not received","stage":"password-reset","resolution":"check spam; whitelist support domain"},
+    {"id":"T011","title":"Blank white page after login","browser":"Brave","browser_version":"latest","os":"macOS Monterey","customer_type":"Technology","issue":"blank white page after authentication","stage":"post-login","resolution":"refresh page; clear cookies"},
+    {"id":"T012","title":"Blank white page on initial load","browser":"Safari","browser_version":"15.4","os":"iOS 15","customer_type":"Retail","issue":"blank white page before login form","stage":"pre-login","resolution":"disable content blocker; restart device"},
+    {"id":"T013","title":"VPN breaks login on Opera","browser":"Opera","browser_version":"90.0","os":"Windows 10","customer_type":"Finance","issue":"VPN breaks login session","stage":"pre-login","resolution":"disable VPN; try different network"},
+    {"id":"T014","title":"OAuth consent stuck on Tor Browser","browser":"Tor Browser","browser_version":"latest","os":"Linux Mint","customer_type":"Non-profit","issue":"OAuth consent stuck indefinitely","stage":"consent","resolution":"enable JavaScript; whitelist consent domain"},
+    {"id":"T015","title":"Two-factor authentication code incorrect","browser":"Edge","browser_version":"102.0","os":"Windows 11","customer_type":"SMB","issue":"two-factor authentication failed","stage":"2FA","resolution":"verify device time; resend code"},
+    {"id":"T016","title":"Form submission failure on In-App Browser","browser":"In-App Browser","browser_version":"latest","os":"Android 13","customer_type":"Marketing","issue":"form submission failure","stage":"post-login","resolution":"resubmit form; clear cache"},
+    {"id":"T017","title":"Randomly kicked out after login","browser":"Samsung Internet","browser_version":"15.0","os":"Android 13","customer_type":"Education","issue":"randomly kicked out","stage":"post-login","resolution":"check session cookie; update software"},
+    {"id":"T018","title":"Cookie issues in IE11 causing 403","browser":"Internet Explorer 11","browser_version":"11.0","os":"Windows 10","customer_type":"Government","issue":"403 error due to cookie issues","stage":"pre-login","resolution":"adjust cookie settings; install certificate"}
+  ],
+  "queries": [
+    {
+      "query": "SSO redirect failure on Safari 16.3 macOS Ventura Enterprise",
+      "expected_ids": ["T001"]
+    },
+    {
+      "query": "Infinite captcha spinner in Firefox 98 on Linux Government",
+      "expected_ids": ["T004"]
+    },
+    {
+      "query": "Blank white page post-authentication in Brave on macOS Monterey",
+      "expected_ids": ["T011"]
+    },
+    {
+      "query": "OAuth consent hang on Tor Browser Linux Mint Non-profit",
+      "expected_ids": ["T014"]
+    },
+    {
+      "query": "VPN breaks login Opera Windows Finance",
+      "expected_ids": ["T013"]
+    },
+    {
+      "query": "Two-factor authentication failure on Edge Windows SMB",
+      "expected_ids": ["T015"]
+    },
+    {
+      "query": "Form submission failure in In-App Browser Marketing Android",
+      "expected_ids": ["T016"]
+    },
+    {
+      "query": "Randomly kicked out Samsung Internet Android Education",
+      "expected_ids": ["T017"]
+    },
+    {
+      "query": "403 error cookie issues in IE11 Windows Government",
+      "expected_ids": ["T018"]
+    },
+    {
+      "query": "login failures across browsers",
+      "expected_ids": ["T001","T002","T003","T006","T007","T013"]
+    },
+    {
+      "query": "captcha issues",
+      "expected_ids": ["T004","T005"]
+    },
+    {
+      "query": "blank page errors",
+      "expected_ids": ["T011","T012"]
+    },
+    {
+      "query": "account lockout problems",
+      "expected_ids": ["T008","T009"]
+    },
+    {
+      "query": "password reset failures",
+      "expected_ids": ["T010"]
+    },
+    {
+      "query": "extension conflicts",
+      "expected_ids": ["T006","T007"]
+    },
+    {
+      "query": "OAuth related login blocks",
+      "expected_ids": ["T001","T002","T003","T014"]
+    },
+    {
+      "query": "performance and loading issues",
+      "expected_ids": ["T004","T005","T017"]
+    },
+    {
+      "query": "verification and two-factor failures",
+      "expected_ids": ["T015"]
+    }
+  ]
+}
